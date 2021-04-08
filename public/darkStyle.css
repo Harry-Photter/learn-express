@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+h2, p {
+  color: white;
+}
