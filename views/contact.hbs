@@ -1,2 +1,30 @@
-<h2>Contact</h2>
-<p>Send me an email at programmer@example.com</p>
+<h2>Contact me</h2>
+
+{{#if isSent}}
+<p className="isSent">The message has been sent!
+  Filename {{ imageName }} has been saved
+</p>
+{{/if}}
+
+{{#if isError}}
+<p className="isError">You can't leave fields empty!</p>
+{{/if}}
+
+<form action="/contact/send-message" method="POST" enctype="multipart/form-data">
+  <label>
+    Your name: <input type="text" name="author">
+  </label>
+  <label>
+    Your email: <input type="email" name="sender">
+  </label>
+  <label>
+    Title: <input type="text" name="title">
+  </label>
+  <label>
+    Project design: <input type="file" name="image" accept="image/*">
+  </label>
+  <label>
+    Message: <textarea name="message"></textarea>
+  </label>
+  <button type="submit">Send message</button>
+</form>
