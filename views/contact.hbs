@@ -2,7 +2,7 @@
 
 {{#if isSent}}
 <p className="isSent">The message has been sent!
-  Filename {{ imageName }} has been saved
+  Filename {{ filename }} has been saved
 </p>
 {{/if}}
 
@@ -10,7 +10,7 @@
 <p className="isError">You can't leave fields empty!</p>
 {{/if}}
 
-<form action="/contact/send-message" method="POST" enctype="multipart/form-data">
+<form action="/contact/send-message" method="POST">
   <label>
     Your name: <input type="text" name="author">
   </label>
